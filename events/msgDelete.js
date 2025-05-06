@@ -7,7 +7,7 @@ module.exports = {
     if(!message.guild) return; //return if DMs
     if(message.author.bot) return; //return if another bot sent an inappropriate message
     
-    // wait to allow audit logs to update
+    //wait to allow audit logs to update
     setTimeout(async () => {
       try {
         const fetchedLogs = await message.guild.fetchAuditLogs({
